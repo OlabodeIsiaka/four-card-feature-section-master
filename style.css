@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* ### Primary */
+
+	--Red: 0, 78%, 62%;
+	--Cyan: 180, 62%, 55%;
+	--Orange: 34, 97%, 64%;
+	--Blue: 212, 86%, 64%;
+
+	/* ### Neutral */
+
+	--Very-Dark-Blue: 234, 12%, 34%;
+	--Grayish-Blue: 229, 6%, 66%, 0.2;
+	--Very-Light-Gray: 0, 0%, 98%;
+}
+
+body {
+	background-color: hsl(var(--Very-Light-Gray));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+.container {
+	filter: blur(0.5px);
+	max-width: 375px;
+}
+.main-col {
+	margin: 0 auto;
+	width: 85%;
+}
+.box {
+	position: relative;
+	text-align: justify;
+	background-color: white;
+
+	padding: 1.5em 2.5em 0 1.5em;
+	margin: 1em 0;
+	border-top: solid 0.2rem;
+	border-radius: 0.3rem;
+	box-shadow: 0 7px 5px rgb(161, 161, 161);
+}
+.col-1::after {
+	content: url(./images/icon-supervisor.svg);
+	position: absolute;
+	top: 8rem;
+	right: 1.5rem;
+}
+.col-2::after {
+	content: url(./images/icon-team-builder.svg);
+	position: absolute;
+	top: 8rem;
+	right: 1.5rem;
+}
+.col-3::after {
+	display: block;
+	content: url(./images/icon-karma.svg);
+	position: absolute;
+	top: 7rem;
+	right: 1.5rem;
+}
+.col-4::after {
+	content: url(./images/icon-calculator.svg);
+	position: absolute;
+	top: 8rem;
+	right: 1.5rem;
+}
+
+.main-h {
+	font-size: 1.7rem;
+	font-weight: 200;
+}
+h3 {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+.main-p {
+	font-size: 1.3rem;
+	line-height: 1.5;
+	color: hsla(var(--Very-Dark-Blue));
+	padding-bottom: 1em;
+	opacity: 0.5;
+	font-weight: 400;
+}
+.box h4 {
+	font-size: 1.2rem;
+	margin-bottom: 0.4rem;
+}
+
+.p {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: hsl(var(--Very-Dark-Blue));
+	padding-bottom: 8em;
+	opacity: 0.5;
+}
+.attribution {
+	font-size: 12px;
+	color: hsl(var(--Very-Dark-Blue));
+}
+.attribution a {
+	color: hsl(var(--Blue));
+}
+
+@media screen and (min-width: 1440px) {
+	.container {
+		/* text-align: center; */
+		max-width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.main-col {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 320px);
+		grid-column-gap: 2rem;
+	}
+
+	.col-1 {
+		grid-column: 1;
+		grid-row-start: 2;
+		grid-row-end: 4;
+	}
+	.col-2 {
+		grid-column: 2;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	.col-3 {
+		grid-column: 2;
+		grid-row-start: 3;
+		grid-row-end: 5;
+	}
+	.col-4 {
+		grid-column: 3;
+		grid-row-start: 2;
+		grid-row-end: 4;
+	}
+
+	.main-h {
+		font-size: 1.7rem;
+	}
+	h3 {
+		font-size: 1.9em;
+		font-size: 700;
+	}
+	.main-p {
+		font-size: 0.7rem;
+	}
+
+	.p {
+		font-size: 0.9rem;
+	}
+
+	.box h4 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5em;
+	}
+	.attribution {
+		font-size: 12px;
+	}
+	
+}
